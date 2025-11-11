@@ -37,13 +37,25 @@ print(f"Analysis field shape: {analysis.shape}")
 - **Type**: `float32`
 - **Description**: Numerical weather prediction background field
 - **Dimensions**: (vertical levels, latitude, longitude)
-  
+- **Variable Order**：The data contains 69 variables: 4 surface variables and 65 pressure level variables across 13 standard levels (50, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000 hPa). The variables are arranged in the following order:
+   Surface: u10, v10, t2m, msl
+   Geopotential height (Z) for all 13 levels
+   Specific humidity (q) for all 13 levels
+   U-component of wind (U) for all 13 levels
+   V-component of wind (V) for all 13 levels
+   Temperature (T) for all 13 levels
 ### Observation Data
 - **Shape**: `(batch_size, 69, 721, 1440)`
 - **Type**: `float32`
 - **Description**: Actual measurement data from various sources
-- **Note**: Automatically resized to match background field resolution
-
+- **Variable Order**：The data contains 69 variables: 4 surface variables and 65 pressure level variables across 13 standard levels (50, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000 hPa). The variables are arranged in the following order:
+   Surface: u10, v10, t2m, msl
+   Geopotential height (Z) for all 13 levels
+   Specific humidity (q) for all 13 levels
+   U-component of wind (U) for all 13 levels
+   V-component of wind (V) for all 13 levels
+   Temperature (T) for all 13 levels
+ 
 ### Output Analysis
 - **Shape**: `(batch_size, 69, 721, 1440)`
 - **Type**: `float32`
