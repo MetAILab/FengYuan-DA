@@ -28,7 +28,7 @@ The generated analysis field serves as the initial condition for subsequent nume
 ## Input Data Specifications
 
 ### Background Field
-- **Shape**: `(batch_size, 69, 721, 1440)`
+- **Shape**: `(1, 69, 721, 1440)`
 - **Type**: `float32`
 - **Description**: 6-hour forecast data from the Fengyuan numerical weather prediction model. This represents the model's prior estimate of atmospheric states before assimilation.
 - **Dimensions**: (vertical levels, latitude, longitude)
@@ -40,7 +40,7 @@ The generated analysis field serves as the initial condition for subsequent nume
    V-component of wind (V) for all 13 levels
    Temperature (T) for all 13 levels
 ### Observation Data
-- **Shape**: `(batch_size, 69, 721, 1440)`
+- **Shape**: `(1, 69, 721, 1440)`
 - **Type**: `float32`
 - **Description**: Gridded observational data derived from GDAS (Global Data Assimilation System) observations. 
 - **Variable Order**：The data contains 69 variables: 4 surface variables and 65 pressure level variables across 13 standard levels (50, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000 hPa). The variables are arranged in the following order:
@@ -52,7 +52,7 @@ The generated analysis field serves as the initial condition for subsequent nume
    Temperature (T) for all 13 levels
  
 ### Output Analysis
-**Shape**:(batch_size, 69, 721, 1440)
+**Shape**:(1, 69, 721, 1440)
 **Type**: float32
 **Description**: Optimized analysis field combining background and observations. This analysis serves as the initial condition for subsequent numerical weather prediction forecasts.
 
