@@ -6,25 +6,15 @@ FengYuan Data Assimilation Model providing efficient inference using ONNX models
 ```bash
 pip install onnxruntime numpy torch
 ```
+## Model Download
+The pre-trained ONNX model can be downloaded from:
+ONNX Model Drive Download:
+https://
 
-## Quick Start
-
-```python
-
-# Initialize the inference engine
-inference_engine = ONNXInference(
-    onnx_model_path="path/to/your/FengYFengYuan_DA.onnx",
-    device='cuda'  # Use 'cpu' for CPU-only environments
-)
-
-# Prepare your data
-background = np.random.randn(1, 69, 721, 1440).astype(np.float32)  # Background field
-observation = np.random.randn(1, 69, 721, 1440).astype(np.float32)  # Observation data
-
-# Run data assimilation
-analysis = inference_engine.infer(background, observation)
-print(f"Analysis field shape: {analysis.shape}")
-```
+## Usage
+Run the inference_DA script directly:
+  python inference_DA.py
+  
 ## Data Assimilation Process
 The FengYuan-DA model performs data assimilation by combining:
 - 6-hour forecast field from Fengyuan NWP model (background)
