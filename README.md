@@ -13,7 +13,9 @@ https://
 
 ## Usage
 Run the inference_DA script directly:
-  python inference_DA.py
+```bash
+python inference_DA.py
+```
   
 ## Data Assimilation Process
 The FengYuan-DA model performs data assimilation by combining:
