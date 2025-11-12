@@ -9,7 +9,7 @@ pip install onnxruntime numpy torch
 ## Model Download
 The pre-trained ONNX model can be downloaded from:
 ONNX Model Drive Download:
-https://
+https://zenodo.org/records/17587867
 
 ## Usage
 Run the inference_DA script directly:
@@ -62,4 +62,3 @@ The generated analysis field serves as the initial condition for subsequent nume
 The ONNX model should:
 - Accept two inputs: `background` and `observation`
 - Output a single analysis field
-```
