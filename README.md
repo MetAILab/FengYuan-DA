@@ -7,8 +7,7 @@ FengYuan Data Assimilation Model providing efficient inference using ONNX models
 pip install onnxruntime numpy torch
 ```
 ## Model Download
-The pre-trained ONNX model can be downloaded from:
-ONNX Model Drive Download:
+The FengYuan Data Assimilation Model ONNX model can be downloaded from:
 https://zenodo.org/records/17587867
 
 ## Usage
