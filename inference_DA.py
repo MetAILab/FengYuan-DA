@@ -96,13 +96,14 @@ def main():
     onnx_model_path = "./Fengyuan_DA.onnx"
     #os.environ['CUDA_VISIBLE_DEVICES'] = '1'
     inference_engine = ONNXInference(onnx_model_path, device='cuda')
-    
+    mean=np.load("./data/mean_global.py")
+    std = np.load("./data/std_global.py")
     # Example with single inference
     print("\n=== Single Inference Example ===")
     
     # Create dummy data (replace with your actual data)
-    background = np.random.randn(1, 69, 721, 1440).astype(np.float32)
-    observation = np.random.randn(1, 69, 721, 1440).astype(np.float32)
+    background = np.load("").astype(np.float32)
+    observation = np.load("").astype(np.float32)
     
     # Run inference
     analysis = inference_engine.infer(background, observation)
@@ -115,4 +116,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
